@@ -34,6 +34,87 @@ header{
 p {
 	color: white;
 }
+/* --- --- BUSCAR --- --- */
+
+
+#wrap {
+  margin: auto;
+  margin-top: 4px;
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  float: right;
+  padding: 0;
+  position: relative;
+}
+
+input[type="text"] {
+  height: 28px;
+  font-size: 20px;
+  display: inline-block;
+  font-family: "Montserrat";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 3px;
+  padding-right: 30px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+input[type="text"]:focus:hover {
+  border-bottom: 1px solid #BBB;
+}
+
+input[type="text"]:focus {
+  width: 300px;
+  z-index: 1;
+  border-bottom: 1px solid #BBB;
+  cursor: text;
+}
+input[type="submit"] {
+  height: 25px;
+  width: 23px;
+  display: inline-block;
+  color:red;
+  float: right;
+  background: url(../ico/search.svg) center center no-repeat;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
+  background-size: cover;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 991px) {
+
+	#wrap {
+		margin: auto;
+		display: inline-block;
+		position: relative;
+		height: 60px;
+		float: right;
+		padding: 0;
+		position: relative;
+	  }
+}
+/* --- --- CAROUSEL --- --- */
 .carousel__anterior,
 .carousel__siguiente {
 	position: absolute;
@@ -226,6 +307,11 @@ p {
 .navbar .nav-item .nav-link{
 	color: #f1f1f1;
 }
+.nav-link{
+	justify-content: end;
+	align-items: flex-end;
+	align: left;
+}
 .main-header {
 	position: relative;
 background: url(../images/background.jpg);
@@ -242,16 +328,18 @@ min-height: 500px;
 
 }
 .footer2 {
-	background: var(--negro);
+	background: #0e0e0e;
 	color: #d3d3d3;
 	font-weight: lighter;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding-top: 20px;
-	margin: 1em;
+	margin: 4em;
 	margin: auto;
-	height: 10em;
+	height: 14em;
+	font-weight: lighter;
+	font-size: 14px;
 }
 .grid-layout {
     display: grid;
@@ -282,7 +370,7 @@ min-height: 500px;
 
 .span-3 {
     grid-column-end: span 3;
-    grid-row-end: span 4;
+    grid-row-end: span 3;
 }
 
 
@@ -314,7 +402,9 @@ footer {
 	
 			margin-top: -50px;
 		}
-	
+		.creadores {
+			align: left;
+		}
 }
 @media (max-width: 768px) {
 
@@ -382,4 +472,74 @@ footer {
 		height: 80%;
 		
 	}
+}
+
+
+.about-expograf {
+    color: #fff;
+}
+
+.container-about {
+    margin: auto;
+    margin-top: 5em;
+    margin-bottom: 3em;
+}
+
+.logofooter {
+	background-size: cover;
+	font-size: medium;
+}
+
+.redes {
+    display: flex;
+}
+
+.piedepagina {
+    text-align: center;
+    margin-top: 5px;
+    display: flex;
+}
+
+.footerlogo {
+    justify-content: center;
+    align-items: center;
+}
+
+.derechosreservados {
+    text-align: left;
+}
+
+.derechosreservados1 {
+    text-align: right;
+}
+
+.footer3 {
+    justify-content: center;
+    align-items: flex-start;
+}
+.footer2 {
+	display: flex;
+}
+.footercreadores {
+	width: 100%;
+	justify-content: start;
+	align-items: flex-start;
+}
+
+.footerfooterelequipo {
+	width: 100%;
+	justify-content: start;
+	align-items: flex-start;
+}
+
+.footerdescubre {
+	width: 100%;
+	justify-content: start;
+	align-items: flex-start;
+}
+.parrafos{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
