@@ -6,15 +6,46 @@
 }
 html{
 	scroll-behavior: smooth;
+	overflow-x: hidden;
+	
 }
 body {
 	font-family: 'Montserrat', sans-serif;
 	background: #000000;
 	
 	background-repeat: no-repeat;
+	padding: 0px !important;
+	margin: 0px;
+	
+}
+.padding-body3{
+	
+	margin-top: 3em !important;
+}
+.padding-body2{
+	padding: 0px !important;
+	margin-top: 0px !important;
 }
 header{
 	margin-top: 60px;
+}
+@media screen and (max-width: 800px) {
+	.padding-body{
+		padding: 0px !important;
+		margin-top: 0px !important;
+	}
+	.margin-body {
+		margin: 0px !important;
+	}
+
+}
+@media screen and (max-width: 800px) {
+	.padding-body3{
+		padding: 0px !important;
+		margin-top: 2em !important;
+	}
+
+
 }
 /* --- --- CAROUSEL --- --- */
 .carousel__contenedor {
@@ -116,6 +147,36 @@ input[type="submit"]:hover {
 		padding: 0;
 		position: relative;
 	  }
+}
+
+/* --- --- SCROLL BAR --- --- */
+.scroll-bar::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+  
+}
+.scroll-bar::-webkit-scrollbar-thumb {
+	background: rgb(56, 56, 56);
+
+    border-radius: 4px;
+}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.scroll-bar::-webkit-scrollbar-thumb:hover {
+    background: #535353;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+.scroll-bar::-webkit-scrollbar-thumb:active {
+    background-color:  #535353;
+}
+.scroll-bar::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 4px;
+}
+/* Cambiamos el fondo cuando esté en active o hover */
+.scroll-bar::-webkit-scrollbar-track:hover,
+.scroll-bar::-webkit-scrollbar-track:active {
+  background: #1f1f1f;
 }
 /* --- --- CAROUSEL --- --- */
 .carousel__anterior,
@@ -380,9 +441,7 @@ min-height: 500px;
     color: #929796;
     background-color: #333;
     border-radius: 5px;
-    &:nth-child(odd) {
-        background-color: #424242;
-    }
+   
 }
 
 .span-2 {
@@ -652,7 +711,7 @@ i {
 	text-decoration: #141414;
 	margin-bottom: 30px;
 	width: 250px;
-	height: 320px;
+	height: 325px;
 	background: #fff;
 	position: relative;
 	box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
@@ -674,7 +733,7 @@ i {
 	width: 100%;
 	height: 100%;
 	transition: 0 !important;
-	background-image: url(../images/Creadores/avatar.jpg);
+	background-image: url(../images/Creadores/miguel-angel.jpeg);
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -683,7 +742,7 @@ i {
 	width: 100%;
 	height: 100%;
 	transition: 0 !important;
-	background-image: url(../images/Creadores/avatar2.jpg);
+	background-image: url(../images/Creadores/camilita.jpeg);
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -692,7 +751,7 @@ i {
 	width: 100%;
 	height: 100%;
 	transition: 0 !important;
-	background-image: url(../images/Creadores/avatar3.jpg);
+	background-image: url(../images/Creadores/david.jpeg);
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -701,7 +760,7 @@ i {
 	width: 100%;
 	height: 100%;
 	transition: 0 !important;
-	background-image: url(../images/Creadores/avatar2.jpg);
+	background-image: url(../images/Creadores/leidicita.jpeg);
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -710,7 +769,7 @@ i {
 	width: 100%;
 	height: 100%;
 	transition: 0 !important;
-	background-image: url(../images/Creadores/avatar5.jpg);
+	background-image: url(../images/Creadores/jhon-jairo.jpeg);
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -719,7 +778,7 @@ i {
 	width: 100%;
 	height: 100%;
 	transition: 0 !important;
-	background-image: url(../images/Creadores/avatar3.jpg);
+	background-image: url(../images/Creadores/kevin.jpeg);
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -728,7 +787,7 @@ i {
 	width: 100%;
 	height: 100%;
 	transition: 0 !important;
-	background-image: url(../images/Creadores/avatar5.jpg);
+	background-image: url(../images/Creadores/santtiago.jpg);
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -953,3 +1012,118 @@ a {
 		}
 			
 		}
+
+		
+/*CREADORES*/
+
+.creadores{
+	margin-top: 3em;
+}
+button:focus {
+	outline:none;
+}
+.btn-list{
+	display: flex;
+	justify-content: center;
+}	
+.btn-list button {
+	margin:0 1em;
+}
+.mixitup{
+	margin-top: 1em;
+	padding: -10em;
+}
+
+.item10{
+	position: relative;
+	overflow: hidden;
+	border-radius: 4px;
+	width: 100%;
+}
+.item10:hover:before {
+	opacity:0.8;
+}
+.item10:hover .overlay {
+	opacity:1;
+}
+.item10:hover .overlay:after,
+.item10:hover .overlay:before {
+	opacity:1;
+	transform: scale(1);
+}
+.item10:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgb(247,147,30);
+	background: linear-gradient(45deg, rgba(247,147,30,1) 0%, rgba(255,0,0,1) 70%);
+	opacity: 0;
+	z-index: 1;
+	transition: all 0.5s ease 0s;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: all 0.5s ease 0s;
+}
+.overlay:after {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	transform: scale(1,0);
+}
+.overlay:before {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+	}
+.overlay:before,
+.overlay:after {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	content: "";
+	opacity: 0;
+	z-index: -1;
+	transition: opacity 0.5s, transform 0.5s;
+}
+.overlay a {
+	color: #fff;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	border: 1px solid #fff;
+	text-align: center;
+	line-height: 50px;
+	margin: 0 5px;
+	border-radius: 50%;
+	font-size: 18px;
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+.overlay a:hover {
+	background:#e4713c;
+}
+.mix {
+	margin: 10px 0 20px;
+}
+@media screen and (max-width:700px){
+    .btn-list{
+		display: flex;
+        flex-wrap: wrap;
+		flex-direction: column;
+	}
+}
