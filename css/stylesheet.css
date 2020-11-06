@@ -12,12 +12,13 @@ html{
 body {
 	font-family: 'Montserrat', sans-serif;
 	background: #000000;
-	
+
 	background-repeat: no-repeat;
 	padding: 0px !important;
 	margin: 0px;
 	
 }
+
 .padding-body3{
 	
 	margin-top: 3em !important;
@@ -46,6 +47,18 @@ header{
 	}
 
 
+}
+a{
+	color:#d3d3d3;
+}
+a:hover{
+	color: black;
+}
+.link{
+	color: #BBB;
+}
+.boton{
+	border-radius: 15px;
 }
 /* --- --- CAROUSEL --- --- */
 .carousel__contenedor {
@@ -148,7 +161,79 @@ input[type="submit"]:hover {
 		position: relative;
 	  }
 }
+.more-button{
+	display: flex;
+}
+/* --- --- PRELOADER --- --- */
+.preloader {
+	margin: 100px auto 0;
+	width: 66px;
+	height: 12px;
+	z-index: 99;
+  }
+  #preloader {
+	position: fixed;
+	top: 30%;
+	left: 20%;
+	right: 20%;
+	bottom: 0;
+	
+	/* change if the mask should have another color then white */
+	z-index: 99;
+  }
+  #status {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	/* centers the loading animation horizontally one the screen */
+	top: 50%;
+}
 
+  .preloader .line {
+	width: 1px;
+	height: 12px;
+	background: #fff;
+	margin: 0 1px;
+	display: inline-block;
+	animation: opacity-1 1000ms infinite ease-in-out;
+  }
+  
+.preloader .line-1, .preloader-2 .line-1 { animation-delay: 800ms; }
+.preloader .line-2, .preloader-2 .line-2 { animation-delay: 600ms; }
+.preloader .line-3, .preloader-2 .line-3 { animation-delay: 400ms; }
+.preloader .line-4, .preloader-2 .line-4 { animation-delay: 200ms; }
+.preloader .line-6, .preloader-2 .line-6 { animation-delay: 200ms; }
+.preloader .line-7, .preloader-2 .line-7 { animation-delay: 400ms; }
+.preloader .line-8, .preloader-2 .line-8 { animation-delay: 600ms; }
+.preloader .line-9, .preloader-2 .line-9 { animation-delay: 800ms; }
+
+@keyframes opacity-1 { 
+  0% { 
+    opacity: 1;
+  }
+  50% { 
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
+  }  
+}
+
+@keyframes opacity-2 { 
+  0% { 
+    opacity: 1;
+    height: 15px;
+  }
+  50% { 
+    opacity: 0;
+    height: 12px;
+  }
+  100% { 
+    opacity: 1;
+    height: 15px;
+  }  
+}
 /* --- --- SCROLL BAR --- --- */
 .scroll-bar::-webkit-scrollbar {
     width: 8px;     /* Tamaño del scroll en vertical */
@@ -339,7 +424,7 @@ font-weight: 500;
 	font-size: 16px;
 	min-height: 40.62em;
 	color: #fff;
-	background: linear-gradient(rgba(0, 0, 0, .30) 0%, rgba(0, 0, 0, .30) 100%), url(../images/principal.jpg);
+	background: linear-gradient(rgba(0, 0, 0, .05) 0%, rgba(0, 0, 0, 1) 100%), url(../images/principal.jpg);
 	background-position: center center;
 	background-size: cover;
 	margin-bottom: 3.12em;
@@ -354,7 +439,7 @@ font-weight: 500;
 }
 .imagen-principal .titulo {
 	font-weight:  600;
-	font-size: 2.50em;
+	font-size: 3em;
 	margin-bottom: 0.4;
 }
 .titulo2{
@@ -493,6 +578,18 @@ min-height: 500px;
 .grid-item-10{
 	background-image: url(../images/designs_home/design10.jpeg);
 	background-size: cover;
+}
+
+@media screen and (max-width: 579px) {
+
+	.span-1 {
+		grid-column-end: span 3;
+		grid-row-end: span 1;
+	  }
+	  .span-3 {
+		grid-column-end: span 3;
+		grid-row-end: span 1;
+	  }
 }
 footer {
 	background: url(../images/fondo.jpg) no-repeat;
@@ -711,7 +808,7 @@ i {
 	text-decoration: #141414;
 	margin-bottom: 30px;
 	width: 250px;
-	height: 325px;
+	height: 350px;
 	background: #fff;
 	position: relative;
 	box-shadow: -15px 7px 30px rgba(0, 0, 0, 0.2);
@@ -874,32 +971,35 @@ i {
 	margin-right: 20px;
 }
 .item a .pi {
-	background-color: #e60023;
+	background-color: #333;
 }
 .item a .bh {
-	background-color: #1769ff;
+	background-color: #333;
 }
 .item a .gi {
 	background-color: #333;
 }
 .item a .wa {
-	background-color: #25d366;
+	background-color: #333;
 }
 .item a .tw {
-	background-color: #0084b4;
+	background-color: #333;
 }
 
 .item a .fb {
-	background-color: #3b5998;
+	background: rgb(247,147,30);
+	background: linear-gradient(45deg, rgba(247,147,30,1) 0%, rgba(255,0,0,1) 70%);
 }
 
 .item a .ig {
-	background: #f09433; 
-background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+	background: rgb(247,147,30);
+	background: linear-gradient(45deg, rgba(247,147,30,1) 0%, rgba(255,0,0,1) 70%);
 }
 
+.item a .exp {
+	background: rgb(247,147,30);
+	background: linear-gradient(45deg, rgba(247,147,30,1) 0%, rgba(255,0,0,1) 70%);
+}
 .item .like {
 	position: absolute;
 	width: 30px;
@@ -1127,3 +1227,6 @@ button:focus {
 		flex-direction: column;
 	}
 }
+
+
+
